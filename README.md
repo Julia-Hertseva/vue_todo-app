@@ -2,7 +2,7 @@
 
 A single-page Todo Application built with Vue 3. Supports full CRUD operations, filtering, and intuitive UI interactions. Data persists through external REST API, simulating real production workflow.
 
-👉 **[Live Demo](https://julia-hertseva.github.io/vue-todo-app/)**
+👉 **[Live Demo](https://julia-hertseva.github.io/vue_todo-app/)**
 
 ---
 
