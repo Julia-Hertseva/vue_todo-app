@@ -1,38 +1,86 @@
-# vue_todo-app
+# ✔️ To-Do App
 
-This template should help get you started developing with Vue 3 in Vite.
+A single-page Todo Application built with Vue 3. Supports full CRUD operations, filtering, and intuitive UI interactions. Data persists through external REST API, simulating real production workflow.
 
-## Recommended IDE Setup
+👉 **[Live Demo](https://julia-hertseva.github.io/vue-todo-app/)**
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+---
 
-## Recommended Browser Setup
+## 🧩 Features
+### 🔄 Full CRUD Functionality
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+- **Create** — add new todos with an optimistic UI preview while awaiting API confirmation
+- **Read** — load and render todos from the backend on startup
+- **Update** — double-click to edit titles or toggle completion status
+- **Delete** — fast removal without UI freeze
 
-## Customize configuration
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+### 🧠 Smart Productivity Tools
 
-## Project Setup
+- Smart Filtering: **All / Active / Completed**
+- **Bulk actions**:
+  - Toggle All — mark all tasks as completed or active in one click
+  - Clear Completed — remove all finished items instantly
 
-```sh
+### ✨ Polished User Experience
+
+- Smooth interactions and responsive UI
+- Loading indicators for async requests
+- Optimistic updates with visual feedback (e.g., dim while updating)
+- Dismissible error messages
+
+### ⌨️ Keyboard-friendly Editing
+
+- **Enter** → save changes
+- **Escape** → cancel
+
+---
+
+## 🧩 Tech Stack
+
+| Technology | Usage |
+|-----------|-------|
+| Vue 3 | Component-based UI development using reactive state management (Composition/Options API) |
+| Vite | Fast build & dev environment |
+| Axios | API requests |
+| Bulma CSS | Base UI styles |
+| SCSS | Preprocessor for writing modular and maintainable custom styles |
+| Mate Academy API | Backend for todos |
+
+---
+
+## 📌 Main Components
+
+- **App.vue** — root app logic, data fetching, state management
+- **TodoItem.vue** — single todo component (edit, toggle, delete)
+- **StatusFilter.vue** — filtering UI and active state
+- **Message.vue** — alert & error messages
+- **utils/http.js** — Axios client config
+- **services/todos.js** — API requests implementation
+- **styles/*.scss** — styles & layout
+
+---
+
+## 🔌 API Integration
+
+To send requests correctly, register your **USER_ID** here:
+https://mate-academy.github.io/react_student-registration
+
+Once you have your ID, insert it in request methods (todos.js).
+
+---
+
+## 🚀 Running the Project Locally
+
+```bash
+# Clone the repo
+git clone https://github.com/Julia-Hertseva/vue-todo-app
+
+# Navigate into the folder
+cd vue-todo-app
+
+# Install dependencies
 npm install
-```
 
-### Compile and Hot-Reload for Development
-
-```sh
+# Start development server
 npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
